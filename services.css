@@ -1,0 +1,405 @@
+body
+{
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-direction: column;
+    display: flex;
+    background-color: black;
+    opacity: 0.9;
+}
+
+
+
+*{
+    padding:0px;
+    margin:0px;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box; 
+}
+
+
+.items { position:relative; width:1200px; margin-right:0px; padding-bottom:10px; }
+.items ul{ list-style-type: none;}
+
+@media (max-width:768px) {
+    .items{
+        width:60%;
+        float: center;
+    }
+   /*.items ul li{  border:dashed 1px #cfcfcf; width:304px; margin:4px 13px 12px 0; padding:13px;*/
+        }
+}
+
+/* ########################### HEADER START ################################## */
+
+.header{
+    height: 150px;
+    background-color: black;
+}
+
+/*########################## LOGO STRAT ################################*/
+.logo{
+    width: 28%; 
+    box-sizing: border-box;
+    line-height: auto;
+    left: 0;
+    text-align: center;
+    text-transform: uppercase;  
+}
+
+.effect
+{
+    font-size: 1.5em;
+    color: black;
+    font-weight: 500;
+    word-spacing: 20px;
+}
+.effect span
+{
+    animation: animate 1.2s linear infinite;
+}
+.effect span:nth-child(1)
+{
+    animation-delay: 0s;
+}
+.effect span:nth-child(2)
+{
+    animation-delay: 0.15s;
+}
+.effect span:nth-child(3)
+{
+    animation-delay: 0.3s;
+}
+.effect span:nth-child(4)
+{
+    animation-delay: 0.45s;
+}
+.effect span:nth-child(5)
+{
+    animation-delay: 0.6s;
+}
+.effect span:nth-child(6)
+{
+    animation-delay: 0.75s;
+}
+.effect span:nth-child(7)
+{
+    animation-delay: 0.9s;
+}
+.effect span:nth-child(8)
+{
+    animation-delay: 1.05s;
+}
+.effect span:nth-child(9)
+{
+    animation-delay: 1.2s;
+}
+@keyframes animate
+{
+    0%,80%
+    {
+        color: #333;
+        text-shadow: none;
+    }
+    100%
+    {
+        color:  #fff;
+        text-shadow: 0 0 10px #fff;
+                     0 0 20px  #fff;
+                     0 0 40px  #fff;
+                     0 0 80px  #fff;
+                     0 0 120px #fff;
+                     0 0 240px #fff;
+                     0 0 280px #fff;
+                    0 0 32px #fff;
+                    0 0 360px #fff;
+    }
+}
+
+
+
+/*########################## LOGO END ################################*/
+
+
+
+/* ########################### MENU BTN START ######################## */
+
+.menusec{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*background-color: red;*/
+}
+
+.menu .menubtn{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    padding:5px 30px;
+    margin:0px 0;
+    overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 2px;
+}    
+
+.menubtn:nth-child(1)
+{
+    filter: hue-rotate(290deg);
+}
+.menubtn:nth-child(3)
+{
+    filter:hue-rotate(110deg);
+}
+.menubtn:nth-child(5)
+{
+    filter:hue-rotate(290deg);
+}
+
+.menubtn:hover{
+    background: #03e9f4;
+    color:#050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+}
+
+.menubtn span
+{
+    position: absolute;
+    display: block;
+}
+
+.menubtn span:nth-child(1)
+{
+                    /*TOP*/
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height:2px;
+    background:linear-gradient(90deg,transparent,#03e9f4);
+    animation:animate1 1s linear infinite;
+}
+@keyframes animate1
+{
+    0%
+    {
+        left:-100%;
+    }
+    50%,100%
+    {
+        left:100%;
+    }
+        
+}
+
+.menubtn span:nth-child(2)
+{
+                    /*RIGHT*/
+    top: -100;
+    right: 0;
+    width: 2px;
+    height:100%;
+    background:linear-gradient(180deg,transparent,#03e9f4);
+    animation:animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2
+{
+    0%
+    {
+        top:-100%;
+    }
+    50%,100%
+    {
+        top:100%;
+    }
+        
+}
+
+.menubtn span:nth-child(3)
+{                   
+                    /*BOTTEM*/
+    bottom:0;
+    right: -100%;
+    width: 100%;
+    height:2px;
+    background:linear-gradient(270deg,transparent,#03e9f4);
+    animation:animate3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animate3
+{
+    0%
+    {
+        right:-100%;
+    }
+    50%,100%
+    {
+        right:100%;
+    }
+}
+
+.menubtn span:nth-child(4)
+{
+                    /*LEFT*/
+    bottom:-100%;
+    left: 0;
+    width:2px;
+    height: 100%;
+    background:linear-gradient(360deg,transparent,#03e9f4);
+    animation:animate4 1s linear infinite;
+    animation-delay:0.75s;
+}
+@keyframes animate4
+{
+    0%
+    {
+        bottom:-100%;
+
+    }
+    50%,100%
+    {
+        bottom:100%;
+    }
+} 
+.menu .menubtn a:hover{
+        color: black;
+        text-decoration: none;
+}
+
+        /* ################### MENU BTN END ######################## */
+
+
+
+/* ######################## HEADER END ############################# */
+
+
+/*#####################  SERVICE START ###############################*/
+
+.models{
+	width: 100%;
+	height: 655px;
+	background: #010615;
+	opacity: 0.9;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+.box
+{
+	position: relative;
+	width:300px;
+	height: 310px;
+	padding: 20px 0 0 20px;
+	margin: 40px;
+	background: #060c21;
+	transition: 0.5s;
+}
+.box:hover
+{
+	height: 350px;
+}
+.box.imgBx
+{
+	top: 0;
+	left: 0;
+	width: 10px;
+	height: 10px;
+	padding: 10px;
+	box-sizing: border-box;
+}
+.box.imgBx img
+{
+	max-width: 100px;
+	height: 100px;
+	opacity: 0.1;
+	position: center;
+	transition: 0.5s;
+}
+.box:hover.imgBx img
+{
+		opacity: 1;
+}
+.box:before
+{
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: #fff;
+	z-index: -1;
+}
+.box:after
+{
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: #fff;
+	z-index: -2;
+	filter: blur(40px);
+}
+.box:before,
+.box:after
+{
+	background: linear-gradient(235deg,#89ff00,#010615,#00bcd4);
+}
+.box:nth-child(2):before,
+.box:nth-child(2):after
+{
+	background: linear-gradient(235deg,#ff005e,#010615,#fbff00);
+}
+.box:nth-child(3):before,
+.box:nth-child(3):after
+{
+	background: linear-gradient(235deg,#772aff,#010615,#2196f3);
+}
+.box:nth-child(4):before,
+.box:nth-child(4):after
+{
+	background: linear-gradient(235deg,#ff005e,#010615,#fbff00);
+}
+.box.content
+{
+	position: absolute;
+	bottom: 0;
+	left: 10px;
+	right: 10px;
+	bottom:10px;
+	height: 90px;
+	background: rgba(0,0,0,0.4);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: 0.5s;
+}
+.box:hover.content
+{
+	opacity: 0;
+}
+.box.content h2
+{
+	font-size: 20px;
+	color: #fff;
+	font-weight: 500;
+	line-height: 20px;
+	letter-spacing: 1px;
+}
+.box.content h2 span
+{
+	font-size: 14px;
+	color: #fff;
+	font-weight: 200;
+	letter-spacing: 2px;
+}
